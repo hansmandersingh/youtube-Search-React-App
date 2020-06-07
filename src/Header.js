@@ -9,6 +9,11 @@ class Header extends React.Component {
     this.setState({ textField: e.target.value });
   };
 
+  fix = (e) => {
+    this.props.onSearch(e, this.state.textField)
+    this.setState({textField: ""})
+  }
+
   render() {
     return (
       <>
@@ -20,7 +25,7 @@ class Header extends React.Component {
               border="0"
             />
           </a>
-          <form id="search" className="search" onSubmit={(e) =>this.props.onSearch(e, this.state.textField)}>
+          <form id="search" className="search" onSubmit={this.fix}>
             <input
               type="search"
               placeholder="Search for a title..."
