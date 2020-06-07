@@ -9,7 +9,7 @@ class App extends React.Component {
 
   componentDidMount = () => {
     fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyAfXif5ow-aL4o3qmngxCeezF9hWCvtV14`
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=YOUR_API_KEY_HERE`
     )
       .then((data) => data.json())
       .then((json) => {
@@ -21,7 +21,7 @@ class App extends React.Component {
     e.preventDefault();
 
     fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyAfXif5ow-aL4o3qmngxCeezF9hWCvtV14&q=${query}`
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=YOUR_API_KEY_HERE=${query}`
     )
       .then((data) => data.json())
       .then((json) => {
