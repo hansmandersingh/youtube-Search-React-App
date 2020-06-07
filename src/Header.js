@@ -19,8 +19,8 @@ class Header extends React.Component {
       <>
         <header className="header">
           <a href="/">
-            <img
-              src="https://icons.iconarchive.com/icons/graphics-vibe/classic-3d-social/128/youtube-icon.png"
+            <img style={{width: 251, height: 80}}
+              src="https://d1lss44hh2trtw.cloudfront.net/assets/article/2016/06/28/youtube-inactive-account_1200x500.jpg"
               alt="netflix-font"
               border="0"
             />

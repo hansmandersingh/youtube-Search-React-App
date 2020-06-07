@@ -38,7 +38,7 @@ class App extends React.Component {
             {this.state.latest.length > 0 && <h1>Videos</h1>}
             <div className="titles-wrapper">
               {this.state.latest.map((video) => (
-                <Video key={video.id.videoId} video={video} />
+                <Video key={video.etag} video={video} />
               ))}
             </div>
           </div>
