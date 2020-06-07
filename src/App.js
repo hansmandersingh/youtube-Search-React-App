@@ -17,10 +17,20 @@ class App extends React.Component {
       });
   };
 
+  onSearch = (e, query) => {
+    e.preventDefault();
+
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyAfXif5ow-aL4o3qmngxCeezF9hWCvtV14&q=${query}`)
+      .then(data => data.json())
+      .then(json => {
+        console.log(json)
+      })
+  }
+
   render = () => {
     return (
       <>
-        <Header />
+        <Header onSearch={this.onSearch}/>
         <div className="titleList">
           <div className="title">
             {this.state.latest.length > 0 && <h1>Videos</h1>}
